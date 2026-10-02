@@ -202,6 +202,61 @@ section {
     }
   }
 
+  /* Project buttons: "Live link" / "Code link" / "More projects" */
+  .project-links {
+    @apply flex flex-wrap gap-3 mt-5;
+  }
+
+  .project-link-btn {
+    @apply inline-flex items-center gap-2 px-5 py-2.5 rounded-lg text-sm md:text-base font-semibold border transition-colors duration-300 cursor-pointer;
+
+    &.primary {
+      @apply bg-white text-black border-white hover:bg-white-50;
+    }
+
+    &.secondary {
+      @apply bg-transparent text-white-50 border-white/30 hover:border-white hover:text-white;
+    }
+
+    &.large {
+      @apply px-8 py-4 text-base md:text-lg;
+    }
+
+    svg,
+    img {
+      @apply size-4 md:size-5 shrink-0;
+    }
+  }
+
+  /* "All Projects" page */
+  .all-projects {
+    @apply w-full min-h-dvh px-5 md:px-20 pt-32 md:pt-40 pb-20;
+
+    .projects-grid {
+      @apply mt-16 grid gap-8 sm:grid-cols-2 xl:grid-cols-3;
+    }
+
+    .project-card {
+      @apply border border-black-50 bg-black-100 rounded-xl p-4 flex flex-col gap-4 transition-transform duration-300 hover:-translate-y-1;
+
+      .card-image {
+        @apply relative aspect-[4/3] rounded-lg overflow-hidden;
+
+        img {
+          @apply absolute inset-0 w-full h-full;
+        }
+      }
+
+      h3 {
+        @apply text-xl md:text-2xl font-semibold;
+      }
+
+      .project-links {
+        @apply mt-auto pt-1;
+      }
+    }
+  }
+
   .cta-wrapper {
     @apply relative z-20 cursor-pointer;
   }

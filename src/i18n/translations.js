@@ -42,19 +42,75 @@ const en = {
             desc: "Meeting every deadline without compromising on quality or the small details.",
         },
     },
-    showcase: {
-        ryde: {
-            title: "On-Demand Rides Made Simple with a Powerful, User-Friendly App called Ryde",
-            desc: "An app built with React Native, Expo, & TailwindCSS for a fast, user-friendly experience.",
-            alt: "Ryde",
-        },
-        library: {
-            title: "Library Management Platform",
-            alt: "Library Management Platform",
-        },
-        ycDirectory: {
-            title: "YC Directory - A Startup Showcase App",
-            alt: "YC Directory",
+    projects: {
+        more: "More projects",
+        back: "Back to home",
+        title: "All My Projects",
+        sub: "Project Gallery",
+        liveLink: "Live link",
+        codeLink: "Code link",
+        items: {
+            figma: {
+                name: "Figma Clone",
+                title: "Figma Clone",
+                desc: "A figma clone in which you can create and use different shapes, text and with a sharing functionality for other users.",
+                alt: "Figma Clone",
+            },
+            storeit: {
+                name: "Store It",
+                title: "Store It",
+                alt: "Store It",
+            },
+            ycDirectory: {
+                name: "YC Directory",
+                title: "YC Directory - A Startup Showcase App",
+                alt: "YC Directory",
+            },
+            roomify: {
+                name: "Roomify",
+                title: "An AI application to help you create 3d models based on 2d images of rooms.",
+                alt: "Roomify"
+            },
+            awwwards: {
+                name: "Awwwards",
+                title: "Awwwards",
+                alt: "Awwwards"
+            },
+            xora: {
+                name: "Xora",
+                title: "Xora",
+                alt: "Xora"
+            },
+            macbook: {
+                name: "Macbook Website",
+                title: "Macbook Website",
+                alt: "Macbook Website"
+            },
+            cocktails: {
+                name: "Velvet Pour",
+                title: "Velvet Pour",
+                alt: "Velvet Pour"
+            },
+            travel: {
+                name: "Hilink",
+                title: "Hilink",
+                alt: "Hilink"
+            },
+            brainwave: {
+                name: "Brainwave",
+                title: "Brainwave",
+                alt: "Brainwave"
+            },
+            phone: {
+                name: "iPhone Website",
+                title: "iPhone Website",
+                alt: "iPhone Website"
+            },
+            omnifood: {
+                name: "Omnifood",
+                title: "Omnifood",
+                alt: "Omnifood"
+            },
         },
     },
     experience: {
@@ -163,19 +219,75 @@ const es = {
             desc: "Cumplir cada plazo sin sacrificar la calidad ni los pequeños detalles.",
         },
     },
-    showcase: {
-        ryde: {
-            title: "Viajes bajo demanda, simplificados con una app potente y fácil de usar llamada Ryde",
-            desc: "Una app creada con React Native, Expo y TailwindCSS para una experiencia rápida y amigable.",
-            alt: "Ryde",
-        },
-        library: {
-            title: "Plataforma de Gestión de Bibliotecas",
-            alt: "Plataforma de Gestión de Bibliotecas",
-        },
-        ycDirectory: {
-            title: "YC Directory - Una App para Mostrar Startups",
-            alt: "YC Directory",
+    projects: {
+        more: "Más proyectos",
+        back: "Volver al inicio",
+        title: "Todos mis Proyectos",
+        sub: "Galería de Proyectos",
+        liveLink: "Enlace en vivo",
+        codeLink: "Enlace del código",
+        items: {
+            figma: {
+                name: "Figma Clone",
+                title: "Figma Clone",
+                desc: "Un clon de Figma que permite crear y utilizar diversas formas y texto, además de contar con una función para compartir con otros usuarios.",
+                alt: "Figma Clone",
+            },
+            storeit: {
+                name: "Store It",
+                title: "Store It",
+                alt: "Store It",
+            },
+            ycDirectory: {
+                name: "YC Directory",
+                title: "YC Directory - Una App para Mostrar Startups",
+                alt: "YC Directory",
+            },
+            roomify: {
+                name: "Roomify",
+                title: "Una aplicación de IA para ayudarte a crear modelos 3D a partir de imágenes 2D de habitaciones.",
+                alt: "Roomify"
+            },
+            awwwards: {
+                name: "Awwwards",
+                title: "Awwwards",
+                alt: "Awwwards"
+            },
+            xora: {
+                name: "Xora",
+                title: "Xora",
+                alt: "Xora"
+            },
+            macbook: {
+                name: "Macbook Website",
+                title: "Macbook Website",
+                alt: "Macbook Website"
+            },
+            cocktails: {
+                name: "Velvet Pour",
+                title: "Velvet Pour",
+                alt: "Velvet Pour"
+            },
+            travel: {
+                name: "Hilink",
+                title: "Hilink",
+                alt: "Hilink"
+            },
+            brainwave: {
+                name: "Brainwave",
+                title: "Brainwave",
+                alt: "Brainwave"
+            },
+            phone: {
+                name: "iPhone Website",
+                title: "iPhone Website",
+                alt: "iPhone Website"
+            },
+            omnifood: {
+                name: "Omnifood",
+                title: "Omnifood",
+                alt: "Omnifood"
+            },
         },
     },
     experience: {

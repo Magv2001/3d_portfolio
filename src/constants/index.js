@@ -208,7 +208,127 @@ const socialImgs = [
     },
 ];
 
+// ---------------------------------------------------------------------------
+// PROJECTS
+// - `featured: true`  -> shown on the home page (first three only).
+// - Every project is shown on the "All Projects" page.
+// - liveLink / codeLink: leave as "" to hide that button.
+// - Texts (name, title, desc, alt) live in i18n/translations.js
+//   under `projects.items.<id>`.
+// ---------------------------------------------------------------------------
+const projects = [
+    {
+        id: "figma",
+        imgPath: "/images/project1.png",
+        bg: "#0e0e10",
+        fit: "cover",
+        featured: true,
+        liveLink: "https://liveblocks-figma-clone-coral.vercel.app/", // TODO: replace with your live URL
+        codeLink: "https://github.com/Magv2001/liveblocks_figma_clone", // TODO: replace with the repo URL
+    },
+    {
+        id: "storeit",
+        imgPath: "/images/project2.png",
+        bg: "#ffefdb",
+        fit: "contain",
+        featured: true,
+        liveLink: "https://storeit-beta-two.vercel.app/sign-in",
+        codeLink: "https://github.com/Magv2001/store_it",
+    },
+    {
+        id: "ycDirectory",
+        imgPath: "/images/project3.png",
+        bg: "#ffe7db",
+        fit: "contain",
+        featured: true,
+        liveLink: "https://yc-directory-orpin-six.vercel.app/",
+        codeLink: "https://github.com/Magv2001/yc_directory",
+    },
+    {
+        id: "roomify",
+        imgPath: "/images/project4.png",
+        bg: "#ffe7db",
+        fit: "contain",
+        featured: false,
+        liveLink: "https://roomify-one-pi.vercel.app/",
+        codeLink: "https://github.com/Magv2001/roomify", 
+    },
+    {
+        id: "awwwards",
+        imgPath: "/images/project5.png",
+        bg: "#ffe7db",
+        fit: "contain",
+        featured: false,
+        liveLink: "https://martin-awwwards.netlify.app/",
+        codeLink: "https://github.com/Magv2001/awwwards_website", 
+    },
+    {
+        id: "xora",
+        imgPath: "/images/project6.png",
+        bg: "#ffe7db",
+        fit: "contain",
+        featured: false,
+        liveLink: "https://martin-xora.netlify.app/",
+        codeLink: "https://github.com/Magv2001/xora_website", 
+    },
+    {
+        id: "macbook",
+        imgPath: "/images/project7.png",
+        bg: "#ffe7db",
+        fit: "contain",
+        featured: false,
+        liveLink: "https://martin-macbook.netlify.app/",
+        codeLink: "https://github.com/Magv2001/macbook_website", 
+    },
+    {
+        id: "cocktails",
+        imgPath: "/images/project8.png",
+        bg: "#ffe7db",
+        fit: "contain",
+        featured: false,
+        liveLink: "https://martin-cocktails.netlify.app/",
+        codeLink: "https://github.com/Magv2001/cocktail_app", 
+    },
+    {
+        id: "travel",
+        imgPath: "/images/project9.png",
+        bg: "#ffe7db",
+        fit: "contain",
+        featured: false,
+        liveLink: "https://martin-travel.netlify.app/",
+        codeLink: "https://github.com/Magv2001/travel_app", 
+    },
+    {
+        id: "brainwave",
+        imgPath: "/images/project10.png",
+        bg: "#ffe7db",
+        fit: "contain",
+        featured: false,
+        liveLink: "https://martin-brainwave.netlify.app/",
+        codeLink: "https://github.com/Magv2001/brainwave_website", 
+    },
+    {
+        id: "phone",
+        imgPath: "/images/project11.png",
+        bg: "#ffe7db",
+        fit: "contain",
+        featured: false,
+        liveLink: "https://martin-phone.netlify.app/",
+        codeLink: "https://github.com/Magv2001/apple_website", 
+    },
+    {
+        id: "omnifood",
+        imgPath: "/images/project12.png",
+        bg: "#ffe7db",
+        fit: "contain",
+        featured: false,
+        liveLink: "https://omnifood-marting.netlify.app/",
+        codeLink: "https://github.com/Magv2001/Omnifood", 
+    },
+];
+
 export {
+    projects,
     words,
     abilities,
     logoIconsList,
