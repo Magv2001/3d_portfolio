@@ -4,8 +4,11 @@ import HeroExperience from "../components/HeroModels/HeroExperience"
 import { words } from "../constants"
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
+import { useLanguage } from "../i18n/useLanguage";
 
 const Hero = () => {
+    const { t } = useLanguage();
+
     useGSAP(() => {
         gsap.fromTo(".hero-text h1",
             {
@@ -20,7 +23,7 @@ const Hero = () => {
                 ease: "power2.inOut"
             },
         )
-    })
+    }, [])
 
     return (
         <section id="hero" className="relative overflow-hidden">
@@ -34,35 +37,35 @@ const Hero = () => {
                     <div className="flex flex-col gap-7">
                         <div className="hero-text">
                             <h1>
-                                Developing
+                                {t("hero.line1")}
                                 <span className="slide">
                                     <span className="wrapper">
-                                        {words.map((word) => (
-                                            <span key={word.text} className="flex items-center md:gap-3 gap-1 pb-2">
+                                        {words.map((word, index) => (
+                                            <span key={`${word.id}-${index}`} className="flex items-center md:gap-3 gap-1 pb-2">
                                                 <img 
                                                     src={word.imgPath}
-                                                    alt={word.text}
+                                                    alt={t(`words.${word.id}`)}
                                                     className="xl:size-12 md:size-10 size-7 md:p-2 p-1 rounded-full bg-white-50"
                                                 />
 
-                                                <span>{word.text}</span>
+                                                <span>{t(`words.${word.id}`)}</span>
                                             </span>
                                         ))}
                                     </span>
                                 </span>
                             </h1>
-                            <h1>into Modern Projects</h1>
-                            <h1>that Suit Your Needs</h1>
+                            <h1>{t("hero.line2")}</h1>
+                            <h1>{t("hero.line3")}</h1>
                         </div>
                         
                         <p className="text-white-50 md:text-xl relative z-10 pointer-events-none">
-                            Hi, My name is Martin, a developer located in Ecuador <br />
-                            who loves coding and creating different kinds of applications.
+                            {t("hero.introLine1")} <br />
+                            {t("hero.introLine2")}
                         </p>
                         <Button 
                             className="md:w-80 md:h-16 w-70 h-12"
                             id="button"
-                            text="See my Projects"
+                            text={t("hero.cta")}
                         />
                     </div>
                 </header>

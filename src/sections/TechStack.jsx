@@ -3,8 +3,14 @@ import TechIcon from "../components/Models/TechLogos/TechIcon"
 import TitleHeader from "../components/TitleHeader"
 import { techStackIcons, techStackImgs } from "../constants"
 import gsap from "gsap"
+import { useLanguage } from "../i18n/useLanguage"
+import { ScrollTrigger } from "gsap/ScrollTrigger"
+
+gsap.registerPlugin(ScrollTrigger)
 
 const TechStack = () => {
+    const { t } = useLanguage();
+
     useGSAP(() => {
         gsap.fromTo(".tech-card", { y: 50, opacity: 0 }, {
             y: 0,
@@ -17,19 +23,19 @@ const TechStack = () => {
                 start: "top center"
             }
         })
-    })
+    }, [])
 
     return (
         <div id="skills" className="flex-center section-padding">
             <div className="w-full h-full md:px-10 px-5">
                 <TitleHeader 
-                    title="The Tech Stack I Use In My Projects"
-                    sub="Programming Languages, Libraries/Frameworks and DataBases"
+                    title={t("techStack.title")}
+                    sub={t("techStack.sub")}
                 />
 
                 <div className="tech-grid">
                     {techStackIcons.map((icon) => (
-                        <div key={icon.name} className="card-border tech-card overflow-hidden group xl:rounded-full rounded-lg">
+                        <div key={icon.id} className="card-border tech-card overflow-hidden group xl:rounded-full rounded-lg">
                             <div className="tech-card-animated-bg" />
                             <div className="tech-card-content">
                                 <div className="tech-icon-wrapper">
@@ -37,7 +43,7 @@ const TechStack = () => {
                                 </div>
 
                                 <div className="padding-x w-full">
-                                    <p>{icon.name}</p>
+                                    <p>{t(`techStack.roles.${icon.id}`)}</p>
                                 </div>
                             </div>
                         </div>
@@ -45,14 +51,14 @@ const TechStack = () => {
 
                     {/* In case of using images instead of 3d models */}
                     {/* {techStackImgs.map((icon) => (
-                        <div key={icon.name} className="card-border tech-card overflow-hidden group xl:rounded-full rounded-lg">
+                        <div key={icon.id} className="card-border tech-card overflow-hidden group xl:rounded-full rounded-lg">
                             <div className="tech-card-animated-bg" />
                             <div className="tech-card-content">
                                 <div className="tech-icon-wrapper">
-                                    <img src={icon.imgPath} />
+                                    <img src={icon.imgPath} alt={t(`techStack.roles.${icon.id}`)} />
                                 </div>
                                 <div className="padding-x w-full">
-                                    <p>{icon.name}</p>
+                                    <p>{t(`techStack.roles.${icon.id}`)}</p>
                                 </div>
                             </div>
                         </div>

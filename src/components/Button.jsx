@@ -1,6 +1,7 @@
 const Button = ({ text, className, id }) => {
     return (
-        <a 
+        <a
+            href="#counter"
             onClick={(e) => {
                 e.preventDefault();
 

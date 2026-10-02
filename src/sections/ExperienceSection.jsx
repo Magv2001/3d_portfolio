@@ -4,16 +4,19 @@ import { expCards } from "../constants"
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useLanguage } from "../i18n/useLanguage";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const ExperienceSection = () => {
+    const { t } = useLanguage();
+
     useGSAP(() => {
         gsap.utils.toArray(".timeline-card").forEach((card) => {
             gsap.from(card, {
                 xPercent: -100,
                 opacity: 0,
-                transformOrigin: "left left",
+                transformOrigin: "left center",
                 duration: 1,
                 ease: "power2.inOut",
                 scrollTrigger: {
@@ -24,7 +27,7 @@ const ExperienceSection = () => {
         })
 
         gsap.to(".timeline", {
-            transformOrigin: "bottom bottom",
+            transformOrigin: "center bottom",
             ease: "power1.inOut",
             scrollTrigger: {
                 trigger: ".timeline",
@@ -56,18 +59,21 @@ const ExperienceSection = () => {
         <section id="experience" className="w-full md:mt-40 mt-20 section-padding xl:px-0">
             <div className="w-full h-full md:px-20 px-5">
                 <TitleHeader 
-                    title="Professional Work Experience" 
-                    sub="My Career Overview" 
+                    title={t("experience.title")}
+                    sub={t("experience.sub")}
                 />
 
                 <div className="mt-32 relative">
                     <div className="relative z-50 xl:space-y-32 space-y-10">
                         {expCards.map((card, index) => (
-                            <div key={card.title} className="exp-card-wrapper">
+                            <div key={card.id} className="exp-card-wrapper">
                                 <div className="xl:w-2/6">
-                                    <GlowCard card={card} index={index}>
+                                    <GlowCard
+                                        card={{ review: t(`experience.cards.${card.id}.review`) }}
+                                        index={index}
+                                    >
                                         <div>
-                                            <img src={card.imgPath} alt={card.title} />
+                                            <img src={card.imgPath} alt={t(`experience.cards.${card.id}.title`)} />
                                         </div>
                                     </GlowCard>
                                 </div>
@@ -84,16 +90,18 @@ const ExperienceSection = () => {
                                                 <img src={card.logoPath} alt="logo" />
                                             </div>
                                             <div>
-                                                <h1 className="font-semibold text-3xl">{card.title}</h1>
+                                                <h1 className="font-semibold text-3xl">
+                                                    {t(`experience.cards.${card.id}.title`)}
+                                                </h1>
                                                 <p className="my-5 text-white-50">
-                                                    {card.date}
+                                                    {t(`experience.cards.${card.id}.date`)}
                                                 </p>
                                                 <p className="text-[#839cb5] italic">
-                                                    Responsibilities
+                                                    {t("experience.responsibilities")}
                                                 </p>
                                                 <ul className="list-disc ms-5 mt-5 flex flex-col gap-5 text-white-50">
-                                                    {card.responsibilities.map((responsibility) => (
-                                                        <li key={responsibility} className="text-lg">
+                                                    {t(`experience.cards.${card.id}.responsibilities`).map((responsibility, i) => (
+                                                        <li key={i} className="text-lg">
                                                             {responsibility}
                                                         </li>
                                                     ))}

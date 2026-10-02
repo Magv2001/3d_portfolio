@@ -1,140 +1,115 @@
 const navLinks = [
-    {
-        name: "Work",
-        link: "#work",
-    },
-    {
-        name: "Experience",
-        link: "#experience",
-    },
-    {
-        name: "Skills",
-        link: "#skills",
-    },
+    { id: "work", link: "#work" },
+    { id: "experience", link: "#experience" },
+    { id: "skills", link: "#skills" },
 ];
 
 const words = [
-    { text: "Ideas", imgPath: "/images/ideas.svg" },
-    { text: "Concepts", imgPath: "/images/concepts.svg" },
-    { text: "Designs", imgPath: "/images/designs.svg" },
-    { text: "Code", imgPath: "/images/code.svg" },
-    { text: "Ideas", imgPath: "/images/ideas.svg" },
-    { text: "Concepts", imgPath: "/images/concepts.svg" },
-    { text: "Designs", imgPath: "/images/designs.svg" },
-    { text: "Code", imgPath: "/images/code.svg" },
+    { id: "ideas", imgPath: "/images/ideas.svg" },
+    { id: "concepts", imgPath: "/images/concepts.svg" },
+    { id: "designs", imgPath: "/images/designs.svg" },
+    { id: "code", imgPath: "/images/code.svg" },
+    { id: "ideas", imgPath: "/images/ideas.svg" },
+    { id: "concepts", imgPath: "/images/concepts.svg" },
+    { id: "designs", imgPath: "/images/designs.svg" },
+    { id: "code", imgPath: "/images/code.svg" },
 ];
 
 const counterItems = [
-    { value: 3, suffix: "+", label: "Years of Experience" },
-    { value: 30, suffix: "+", label: "Programming Skills Acquired" },
-    { value: 25, suffix: "+", label: "Completed Projects" },
-    { value: 100, suffix: "%", label: "Client Satisfaction Rate" },
+    { id: "experience", value: 3, suffix: "+" },
+    { id: "skills", value: 30, suffix: "+" },
+    { id: "projects", value: 25, suffix: "+" },
+    { id: "satisfaction", value: 100, suffix: "%" },
 ];
 
 const logoIconsList = [
     {
+        name: "Company 1",
         imgPath: "/images/logos/company-logo-1.png",
     },
     {
+        name: "Company 2",
         imgPath: "/images/logos/company-logo-2.png",
     },
     {
+        name: "Company 3",
         imgPath: "/images/logos/company-logo-3.png",
     },
     {
+        name: "Company 4",
         imgPath: "/images/logos/company-logo-4.png",
     },
     {
+        name: "Company 5",
         imgPath: "/images/logos/company-logo-5.png",
     },
     {
+        name: "Company 6",
         imgPath: "/images/logos/company-logo-6.png",
     },
     {
+        name: "Company 7",
         imgPath: "/images/logos/company-logo-7.png",
     },
     {
+        name: "Company 8",
         imgPath: "/images/logos/company-logo-8.png",
     },
     {
+        name: "Company 9",
         imgPath: "/images/logos/company-logo-9.png",
     },
     {
+        name: "Company 10",
         imgPath: "/images/logos/company-logo-10.png",
     },
     {
+        name: "Company 11",
         imgPath: "/images/logos/company-logo-11.png",
     },
 ];
 
 const abilities = [
-    {
-        imgPath: "/images/seo.png",
-        title: "Quality Focus",
-        desc: "Delivering high-quality results while maintaining attention to every detail.",
-    },
-    {
-        imgPath: "/images/chat.png",
-        title: "Reliable Communication",
-        desc: "Keeping you updated at every step to ensure transparency and clarity.",
-    },
-    {
-        imgPath: "/images/time.png",
-        title: "On-Time Delivery",
-        desc: "Making sure projects are completed on schedule, with quality & attention to detail.",
-    },
+    { id: "quality", imgPath: "/images/seo.png" },
+    { id: "communication", imgPath: "/images/chat.png" },
+    { id: "delivery", imgPath: "/images/time.png" },
 ];
 
 const techStackImgs = [
-    {
-        name: "React Developer",
-        imgPath: "/images/logos/react.png",
-    },
-    {
-        name: "Python Developer",
-        imgPath: "/images/logos/python.svg",
-    },
-    {
-        name: "Backend Developer",
-        imgPath: "/images/logos/node.png",
-    },
-    {
-        name: "Interactive Developer",
-        imgPath: "/images/logos/three.png",
-    },
-    {
-        name: "Project Manager",
-        imgPath: "/images/logos/git.svg",
-    },
+    { id: "react", imgPath: "/images/logos/react.png" },
+    { id: "python", imgPath: "/images/logos/python.svg" },
+    { id: "backend", imgPath: "/images/logos/node.png" },
+    { id: "interactive", imgPath: "/images/logos/three.png" },
+    { id: "manager", imgPath: "/images/logos/git.svg" },
 ];
 
 const techStackIcons = [
     {
-        name: "React Developer",
+        id: "react",
         modelPath: "/models/react_logo-transformed.glb",
         scale: 1,
         rotation: [0, 0, 0],
     },
     {
-        name: "Python Developer",
+        id: "python",
         modelPath: "/models/python-transformed.glb",
         scale: 0.8,
         rotation: [0, 0, 0],
     },
     {
-        name: "Backend Developer",
+        id: "backend",
         modelPath: "/models/node-transformed.glb",
         scale: 5,
         rotation: [0, -Math.PI / 2, 0],
     },
     {
-        name: "Interactive Developer",
+        id: "interactive",
         modelPath: "/models/three.js-transformed.glb",
         scale: 0.05,
         rotation: [0, 0, 0],
     },
     {
-        name: "Project Manager",
+        id: "manager",
         modelPath: "/models/git-svg-transformed.glb",
         scale: 0.05,
         rotation: [0, -Math.PI / 4, 0],
@@ -143,30 +118,14 @@ const techStackIcons = [
 
 const expCards = [
     {
-        review:
-        "Demonstrated a high level of initiative and creativity while tackling difficult tasks. Learned and adapted quickly to new technology and software applications.",
+        id: "frontend",
         imgPath: "/images/exp1.png",
         logoPath: "/images/logo1.png",
-        title: "Frontend Developer",
-        date: "September 2020 - September 2021",
-        responsibilities: [
-        "Developed web applications using modern programming languages such as React and Angular.",
-        "Assisted with investigations according to the requirements that the clients needed.",
-        "Optimized web applications to increase their speed and performance.",
-        ],
     },
     {
-        review:
-        "Worked developing applications for my university using different tools for programming.",
+        id: "fullstack",
         imgPath: "/images/exp2.png",
         logoPath: "/images/logo2.png",
-        title: "Full Stack Developer",
-        date: "November 2021 - October 2022",
-        responsibilities: [
-        "Worked with a team of professionals to assist them with my skills as a programmer.",
-        "Developed applications using frontend and backend tools.",
-        "Contributed in the deployment of the applications.",
-        ],
     },
 ];
 

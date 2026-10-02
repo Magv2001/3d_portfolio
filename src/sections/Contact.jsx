@@ -2,9 +2,11 @@ import { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 
 import TitleHeader from "../components/TitleHeader";
+import { useLanguage } from "../i18n/useLanguage";
 import ContactExperience from "../components/ContactExperience";
 
 const Contact = () => {
+    const { t } = useLanguage();
     const formRef = useRef(null);
     const [formData, setFormData] = useState({
         name: "",
@@ -12,6 +14,7 @@ const Contact = () => {
         message: ""
     });
     const [loading, setLoading] = useState(false);
+    const [status, setStatus] = useState(null); // null | "success" | "error"
 
     const handleChange = (e) => {
         const { name, value } = e.target;
@@ -25,6 +28,7 @@ const Contact = () => {
         e.preventDefault();
 
         setLoading(true);
+        setStatus(null);
         
         try {
             await emailjs.sendForm(
@@ -35,8 +39,10 @@ const Contact = () => {
             )
 
             setFormData({ name: "", email: "", message: "" });
+            setStatus("success");
         } catch(error) {
-            console.log("EMAILJS ERROR,", error)
+            console.error("EMAILJS ERROR,", error)
+            setStatus("error");
         } finally {
             setLoading(false)
         }
@@ -46,8 +52,8 @@ const Contact = () => {
         <section id="contact" className="flex-center section-padding">
             <div className="w-full h-full md:px-10 px-5">
                 <TitleHeader 
-                    title="Get In Contact With Me"
-                    sub="Contact Information"
+                    title={t("contact.title")}
+                    sub={t("contact.sub")}
                 />
 
                 <div className="mt-16 grid-12-cols">
@@ -56,12 +62,12 @@ const Contact = () => {
                         <div className="flex-center card-border rounded-xl p-10">
                             <form onSubmit={handleSubmit} className="w-full flex flex-col gap-7" ref={formRef}>
                                 <div>
-                                    <label htmlFor="name">Name</label>
+                                    <label htmlFor="name">{t("contact.name")}</label>
                                     <input 
                                         type="text"
                                         id="name"
                                         name="name"
-                                        placeholder="Your name"
+                                        placeholder={t("contact.namePlaceholder")}
                                         value={formData.name}
                                         onChange={handleChange}
                                         required
@@ -69,12 +75,12 @@ const Contact = () => {
                                 </div>
 
                                 <div>
-                                    <label htmlFor="email">Email</label>
+                                    <label htmlFor="email">{t("contact.email")}</label>
                                     <input 
                                         type="email"
                                         id="email"
                                         name="email"
-                                        placeholder="Your email address"
+                                        placeholder={t("contact.emailPlaceholder")}
                                         value={formData.email}
                                         onChange={handleChange}
                                         required
@@ -82,12 +88,12 @@ const Contact = () => {
                                 </div>
 
                                 <div>
-                                    <label htmlFor="message">Message</label>
+                                    <label htmlFor="message">{t("contact.message")}</label>
                                     <textarea
                                         id="message"
                                         name="message"
                                         rows="5"
-                                        placeholder="Your message"
+                                        placeholder={t("contact.messagePlaceholder")}
                                         value={formData.message}
                                         onChange={handleChange}
                                         required
@@ -98,12 +104,23 @@ const Contact = () => {
                                 <button type="submit" disabled={loading}>
                                     <div className="cta-button group">
                                         <div className="bg-circle" />
-                                        <p className="text">{loading ? "Sending..." : "Send Message"}</p>
+                                        <p className="text">{loading ? t("contact.sending") : t("contact.send")}</p>
                                         <div className="arrow-wrapper">
                                             <img src="/images/arrow-down.svg" alt="arrow" />
                                         </div>
                                     </div>
                                 </button>
+
+                                {status === "success" && (
+                                    <p role="status" className="text-green-400">
+                                        {t("contact.success")}
+                                    </p>
+                                )}
+                                {status === "error" && (
+                                    <p role="alert" className="text-red-400">
+                                        {t("contact.error")}
+                                    </p>
+                                )}
                             </form>
                         </div>
                     </div>

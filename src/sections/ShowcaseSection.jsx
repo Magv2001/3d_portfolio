@@ -2,10 +2,12 @@ import { useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
+import { useLanguage } from "../i18n/useLanguage";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const ShowcaseSection = () => {
+    const { t } = useLanguage();
     const sectionRef = useRef(null);
     const project1Ref = useRef(null);
     const project2Ref = useRef(null);
@@ -48,12 +50,12 @@ const ShowcaseSection = () => {
                     {/* LEFT */}
                     <div className="first-project-wrapper" ref={project1Ref}>
                         <div className="image-wrapper">
-                            <img src="/images/project1.png" alt="Ryde" />
+                            <img src="/images/project1.png" alt={t("showcase.ryde.alt")} />
                         </div>
                         <div className="text-content">
-                            <h2>On-Demand Rides Made Simple with a Powerfull, User-Friendly App called Ryde</h2>
+                            <h2>{t("showcase.ryde.title")}</h2>
                             <p className="text-white-50 md:text-xl">
-                                An app built with React Native, Expo, & TailwindCSS for a fast, user-friendly experience.
+                                {t("showcase.ryde.desc")}
                             </p>
                         </div>
                     </div>
@@ -62,16 +64,16 @@ const ShowcaseSection = () => {
                     <div className="project-list-wrapper overflow-hidden">
                         <div className="project" ref={project2Ref}>
                             <div className="image-wrapper bg-[#ffefdb]">
-                                <img src="/images/project2.png" alt="Library Management Platform" />
+                                <img src="/images/project2.png" alt={t("showcase.library.alt")} />
                             </div>
-                            <h2>Library Management Platform</h2>
+                            <h2>{t("showcase.library.title")}</h2>
                         </div>
 
                         <div className="project" ref={project3Ref}>
                             <div className="image-wrapper bg-[#ffe7db]">
-                                <img src="/images/project3.png" alt="YC Directory" />
+                                <img src="/images/project3.png" alt={t("showcase.ycDirectory.alt")} />
                             </div>
-                            <h2>YC Directory - A Startup Showcase App</h2>
+                            <h2>{t("showcase.ycDirectory.title")}</h2>
                         </div>
                     </div>
                 </div>

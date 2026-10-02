@@ -322,6 +322,19 @@ section {
   }
 }
 
+/* Hero title size per language.
+   `zoom` scales the whole title (text, icons and the word slider) at once.
+   1 = same size as English, 0.9 = 10% smaller, 0.8 = 20% smaller, etc. */
+html:lang(es) .hero-text {
+  zoom: 1;
+}
+
+@media (min-width: 768px) {
+  html:lang(es) .hero-text {
+    zoom: 1;
+  }
+}
+
 /* Hero text slider starts */
 .slide {
   display: inline-block;
