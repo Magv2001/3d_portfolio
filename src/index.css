@@ -476,6 +476,7 @@ html:lang(es) .hero-text {
   position: absolute;
   overflow: hidden;
   animation: marquee 60s linear infinite;
+  filter: brightness(0) invert(1);
 }
 .marquee-item {
   float: left;
