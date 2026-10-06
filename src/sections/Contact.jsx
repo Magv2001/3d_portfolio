@@ -127,7 +127,7 @@ const Contact = () => {
 
                     {/* 3D Experience - Right Side */}
                     <div className="xl:col-span-7 min-h-96">
-                        <div className="w-full h-full bg-[#cd7c2e] hover:cursor-grab rounded-3xl overflow-hidden">
+                        <div className="w-full h-full bg-[radial-gradient(circle_at_center,#1e3a5f_0%,#0b1622_80%)] hover:cursor-grab rounded-3xl overflow-hidden">
                             <ContactExperience />
                         </div>
                     </div>

@@ -169,6 +169,8 @@ const en = {
     },
     footer: {
         blog: "Visit my blog",
+        modelsBy: "3D models:",
+        by: "by",
         rights: "All rights reserved.",
     },
     language: {
@@ -346,6 +348,8 @@ const es = {
     },
     footer: {
         blog: "Visita mi blog",
+        modelsBy: "Modelos 3D:",
+        by: "de",
         rights: "Todos los derechos reservados.",
     },
     language: {

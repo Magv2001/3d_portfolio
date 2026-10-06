@@ -1,43 +1,46 @@
-import { OrbitControls } from "@react-three/drei";
+import { Environment, Float, OrbitControls } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
 
-import Computer from "./Models/Computer";
+import EmailIcon from "./Models/EmailIcon";
+import { useInView } from "../hooks/useInView";
+
+// Tweak this to resize the icon.
+const ICON_SCALE = 0.028;
 
 const ContactExperience = () => {
+    const [ref, inView, hasBeenInView] = useInView();
+
     return (
-        <Canvas shadows camera={{ position: [0, 3, 7], fov: 45 }}>
-        <ambientLight intensity={0.5} color="#fff4e6" />
+        <div ref={ref} style={{ width: "100%", height: "100%" }}>
+            {/* The canvas is only created once the section is near the screen,
+                and it stops rendering again when it scrolls out of view. */}
+            {hasBeenInView && (
+                <Canvas
+                    frameloop={inView ? "always" : "never"}
+                    dpr={[1, 1.5]}
+                    camera={{ position: [0, 0, 7], fov: 45 }}
+                >
+                    <ambientLight intensity={0.6} />
+                    <directionalLight position={[3, 4, 5]} intensity={2} />
+                    <Environment preset="city" />
 
-        <directionalLight position={[5, 5, 3]} intensity={2.5} color="#ffd9b3" />
+                    <OrbitControls
+                        enableZoom={false}
+                        enablePan={false}
+                        autoRotate
+                        autoRotateSpeed={1.5}
+                        minPolarAngle={Math.PI / 3}
+                        maxPolarAngle={Math.PI / 1.7}
+                    />
 
-        <directionalLight
-            position={[5, 9, 1]}
-            castShadow
-            intensity={2.5}
-            color="#ffd9b3"
-        />
-
-        <OrbitControls
-            enableZoom={false}
-            minPolarAngle={Math.PI / 5}
-            maxPolarAngle={Math.PI / 2}
-        />
-
-        <group scale={[1, 1, 1]}>
-            <mesh
-            receiveShadow
-            position={[0, -1.5, 0]}
-            rotation={[-Math.PI / 2, 0, 0]}
-            >
-            <planeGeometry args={[30, 30]} />
-            <meshStandardMaterial color="#a46b2d" />
-            </mesh>
-        </group>
-
-        <group scale={0.03} position={[0, -1.49, -2]} castShadow>
-            <Computer />
-        </group>
-        </Canvas>
+                    <Float speed={2} rotationIntensity={0.2} floatIntensity={1}>
+                        <group scale={ICON_SCALE}>
+                            <EmailIcon />
+                        </group>
+                    </Float>
+                </Canvas>
+            )}
+        </div>
     );
 };
 

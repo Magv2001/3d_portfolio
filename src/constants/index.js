@@ -327,7 +327,32 @@ const projects = [
     },
 ];
 
+// 3D model credits (CC BY 4.0 requires showing title, author, source and license).
+const modelLicense = {
+    name: "CC BY 4.0",
+    url: "https://creativecommons.org/licenses/by/4.0/",
+};
+
+const modelCredits = [
+    {
+        title: "Low Poly Room",
+        author: "Ralph_SwH",
+        authorUrl: "https://sketchfab.com/Ralph_SwH",
+        sourceUrl:
+            "https://sketchfab.com/3d-models/low-poly-room-6efd70b753f24ed2b12541e43154ffdd",
+    },
+    {
+        title: "Email_Icon",
+        author: "Simon.Keating",
+        authorUrl: "https://sketchfab.com/Simon.Keating",
+        sourceUrl:
+            "https://sketchfab.com/3d-models/email-icon-43e4588d176945e889004cf270e17cfa",
+    },
+];
+
 export {
+    modelCredits,
+    modelLicense,
     projects,
     words,
     abilities,
