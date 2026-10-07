@@ -148,9 +148,13 @@ const en = {
         roles: {
             react: "React Developer",
             python: "Python Developer",
-            backend: "Backend Developer",
+            backend: "NodeJS Developer",
             interactive: "Interactive Developer",
             manager: "Project Manager",
+            javascript: "JavaScript Developer",
+            typescript: "TypeScript Developer",
+            tailwind: "Tailwind CSS Developer",
+            mongodb: "MongoDB Developer",
         },
     },
     contact: {
@@ -327,9 +331,13 @@ const es = {
         roles: {
             react: "Desarrollador React",
             python: "Desarrollador Python",
-            backend: "Desarrollador Backend",
+            backend: "Desarrollador NodeJS",
             interactive: "Desarrollador Interactivo",
             manager: "Gestor de Proyectos",
+            javascript: "Desarrollador JavaScript",
+            typescript: "Desarrollador TypeScript",
+            tailwind: "Desarrollador Tailwind CSS",
+            mongodb: "Desarrollador de MongoDB",
         },
     },
     contact: {

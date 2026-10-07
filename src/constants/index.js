@@ -114,6 +114,30 @@ const techStackIcons = [
         scale: 0.05,
         rotation: [0, -Math.PI / 4, 0],
     },
+    {
+        id: "javascript",
+        modelPath: "/models/javascript-logo.glb",
+        scale: 35,
+        rotation: [0, 0, 0],
+    },
+    {
+        id: "typescript",
+        modelPath: "/models/typescript-logo.glb",
+        scale: 35,
+        rotation: [0, 0, 0],
+    },
+    {
+        id: "tailwind",
+        modelPath: "/models/tailwind-logo.glb",
+        scale: 40,
+        rotation: [0, 0, 0],
+    },
+    {
+        id: "mongodb",
+        modelPath: "/models/mongodb-logo.glb",
+        scale: 40,
+        rotation: [0, 0, 0],
+    },
 ];
 
 const expCards = [
@@ -333,20 +357,55 @@ const modelLicense = {
     url: "https://creativecommons.org/licenses/by/4.0/",
 };
 
+// Grouped by author: each author lists the works used.
 const modelCredits = [
     {
-        title: "Low Poly Room",
         author: "Ralph_SwH",
         authorUrl: "https://sketchfab.com/Ralph_SwH",
-        sourceUrl:
-            "https://sketchfab.com/3d-models/low-poly-room-6efd70b753f24ed2b12541e43154ffdd",
+        works: [
+            {
+                title: "Low Poly Room",
+                sourceUrl:
+                    "https://sketchfab.com/3d-models/low-poly-room-6efd70b753f24ed2b12541e43154ffdd",
+            },
+        ],
     },
     {
-        title: "Email_Icon",
         author: "Simon.Keating",
         authorUrl: "https://sketchfab.com/Simon.Keating",
-        sourceUrl:
-            "https://sketchfab.com/3d-models/email-icon-43e4588d176945e889004cf270e17cfa",
+        works: [
+            {
+                title: "Email_Icon",
+                sourceUrl:
+                    "https://sketchfab.com/3d-models/email-icon-43e4588d176945e889004cf270e17cfa",
+            },
+        ],
+    },
+    {
+        author: "Alex human",
+        authorUrl: "https://sketchfab.com/alex-human",
+        works: [
+            {
+                title: "JavaScript Logo – 3D Model",
+                sourceUrl:
+                    "https://sketchfab.com/3d-models/javascript-logo-3d-model-792093fab435419ab70dae39d2891cb3",
+            },
+            {
+                title: "TypeScript Logo – 3D Model",
+                sourceUrl:
+                    "https://sketchfab.com/3d-models/typescript-logo-3d-model-84af2099cb8542549fb56eae0dbabdb5",
+            },
+            {
+                title: "Tailwind CSS Logo – 3D Model",
+                sourceUrl:
+                    "https://sketchfab.com/3d-models/tailwind-css-logo-3d-model-f99f9434bd35448287cdb8d5512a1edc",
+            },
+            {
+                title: "MongoDB Logo — 3D Model",
+                sourceUrl:
+                    "https://sketchfab.com/3d-models/mongodb-logo-3d-model-a8120d58c978422fbce435260409687e",
+            },
+        ],
     },
 ];
 

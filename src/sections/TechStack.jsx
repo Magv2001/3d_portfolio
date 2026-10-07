@@ -42,7 +42,7 @@ const TechStack = () => {
                                     <TechIcon model={icon} />
                                 </div>
 
-                                <div className="padding-x w-full">
+                                <div className="w-full px-4">
                                     <p>{t(`techStack.roles.${icon.id}`)}</p>
                                 </div>
                             </div>

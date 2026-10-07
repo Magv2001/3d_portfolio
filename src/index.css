@@ -321,12 +321,18 @@ section {
     @apply flex flex-col md:justify-center items-center xl:gap-5 xl:h-[50vh] overflow-hidden relative z-10 group-hover:cursor-grab;
 
     & p {
-      @apply text-lg 2xl:text-2xl pb-5 xl:pb-0 font-semibold text-white-50 text-center;
+      @apply text-base 2xl:text-xl leading-snug text-balance pb-5 xl:pb-0 font-semibold text-white-50 text-center;
     }
   }
 
+  /* Flex + wrap (instead of grid) so an incomplete last row is centered.
+     Card widths: 1 column on mobile, 3 on tablet, 5 on desktop (gaps included). */
   .tech-grid {
-    @apply grid xl:grid-cols-5 md:grid-cols-3 grid-cols-1 xl:gap-16 md:gap-10 gap-5 mt-16;
+    @apply flex flex-wrap justify-center xl:gap-16 md:gap-10 gap-5 mt-16;
+
+    & > .tech-card {
+      @apply w-full md:w-[calc((100%-5rem)/3)] xl:w-[calc((100%-16rem)/5)];
+    }
   }
 
   .tech-icon-wrapper {

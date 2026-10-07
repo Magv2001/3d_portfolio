@@ -36,15 +36,20 @@ const Footer = () => {
 
                 <div className="footer-credits">
                     {t("footer.modelsBy")}{" "}
-                    {modelCredits.map((credit, index) => (
-                        <span key={credit.title}>
-                            {index > 0 && " · "}
-                            <a href={credit.sourceUrl} target="_blank" rel="noopener noreferrer">
-                                “{credit.title}”
-                            </a>{" "}
+                    {modelCredits.map((group, groupIndex) => (
+                        <span key={group.author}>
+                            {groupIndex > 0 && " · "}
+                            {group.works.map((work, workIndex) => (
+                                <span key={work.title}>
+                                    {workIndex > 0 && ", "}
+                                    <a href={work.sourceUrl} target="_blank" rel="noopener noreferrer">
+                                        “{work.title}”
+                                    </a>
+                                </span>
+                            ))}{" "}
                             {t("footer.by")}{" "}
-                            <a href={credit.authorUrl} target="_blank" rel="noopener noreferrer">
-                                {credit.author}
+                            <a href={group.authorUrl} target="_blank" rel="noopener noreferrer">
+                                {group.author}
                             </a>
                         </span>
                     ))}{" "}
