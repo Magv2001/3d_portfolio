@@ -361,16 +361,12 @@ section {
   .footer {
     @apply my-10 md:mt-20 mt-10 text-white-50 px-5 md:px-20 xl:px-20 flex items-center justify-center;
 
-    .footer-container {
-      @apply grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-0 w-full;
-    }
-
-    p {
-      @apply text-center md:text-start cursor-pointer;
+    .footer-copyright {
+      @apply text-center;
     }
 
     .footer-credits {
-      @apply w-full text-center text-xs md:text-sm text-white-50/60;
+      @apply w-full max-w-4xl text-center text-xs md:text-sm text-white-50/60;
 
       a {
         @apply underline underline-offset-2 hover:text-white transition-colors duration-300;

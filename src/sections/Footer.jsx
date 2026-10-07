@@ -6,33 +6,25 @@ const Footer = () => {
 
     return (
         <footer className="footer">
-            <div className="w-full flex flex-col gap-6">
-                <div className="footer-container">
-                    <div className="flex flex-col justify-center md:items-start items-center">
-                        <a href="/">{t("footer.blog")}</a>
-                    </div>
-
-                    <div className="socials">
-                        {socialImgs.map((img) => (
-                            <a
-                                className="icon"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                href={img.url}
-                                key={img.url}
-                                aria-label={img.name}
-                            >
-                                <img src={img.imgPath} alt={img.name} />
-                            </a>
-                        ))}
-                    </div>
-
-                    <div className="flex flex-col justify-center">
-                        <p className="text-center md:text-end">
-                            © {new Date().getFullYear()} Martin | MartinDev. {t("footer.rights")}
-                        </p>
-                    </div>
+            <div className="w-full flex flex-col items-center gap-6">
+                <div className="socials">
+                    {socialImgs.map((img) => (
+                        <a
+                            className="icon"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            href={img.url}
+                            key={img.url}
+                            aria-label={img.name}
+                        >
+                            <img src={img.imgPath} alt={img.name} />
+                        </a>
+                    ))}
                 </div>
+
+                <p className="footer-copyright">
+                    © {new Date().getFullYear()} Martin | MartinDev. {t("footer.rights")}
+                </p>
 
                 <div className="footer-credits">
                     {t("footer.modelsBy")}{" "}

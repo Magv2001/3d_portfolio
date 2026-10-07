@@ -44,6 +44,8 @@ const en = {
     },
     projects: {
         more: "More projects",
+        featuredTitle: "My Projects",
+        featuredSub: "Featured Work",
         back: "Back to home",
         title: "All My Projects",
         sub: "Project Gallery",
@@ -172,7 +174,6 @@ const en = {
         error: "Something went wrong. Please try again later.",
     },
     footer: {
-        blog: "Visit my blog",
         modelsBy: "3D models:",
         by: "by",
         rights: "All rights reserved.",
@@ -227,6 +228,8 @@ const es = {
     },
     projects: {
         more: "Más proyectos",
+        featuredTitle: "Mis Proyectos",
+        featuredSub: "Trabajo Destacado",
         back: "Volver al inicio",
         title: "Todos mis Proyectos",
         sub: "Galería de Proyectos",
@@ -355,7 +358,6 @@ const es = {
         error: "Algo salió mal. Por favor, inténtalo de nuevo más tarde.",
     },
     footer: {
-        blog: "Visita mi blog",
         modelsBy: "Modelos 3D:",
         by: "de",
         rights: "Todos los derechos reservados.",
