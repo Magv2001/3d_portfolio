@@ -243,16 +243,16 @@ const socialImgs = [
 const projects = [
     {
         id: "figma",
-        imgPath: "/images/project1.png",
+        imgPath: "/images/project1.webp",
         bg: "#0e0e10",
         fit: "cover",
         featured: true,
-        liveLink: "https://liveblocks-figma-clone-coral.vercel.app/", // TODO: replace with your live URL
-        codeLink: "https://github.com/Magv2001/liveblocks_figma_clone", // TODO: replace with the repo URL
+        liveLink: "https://liveblocks-figma-clone-coral.vercel.app/",
+        codeLink: "https://github.com/Magv2001/liveblocks_figma_clone",
     },
     {
         id: "storeit",
-        imgPath: "/images/project2.png",
+        imgPath: "/images/project2.webp",
         bg: "#ffefdb",
         fit: "contain",
         featured: true,
@@ -261,7 +261,7 @@ const projects = [
     },
     {
         id: "ycDirectory",
-        imgPath: "/images/project3.png",
+        imgPath: "/images/project3.webp",
         bg: "#ffe7db",
         fit: "contain",
         featured: true,
@@ -270,7 +270,7 @@ const projects = [
     },
     {
         id: "roomify",
-        imgPath: "/images/project4.png",
+        imgPath: "/images/project4.webp",
         bg: "#ffe7db",
         fit: "contain",
         featured: false,
@@ -279,7 +279,7 @@ const projects = [
     },
     {
         id: "awwwards",
-        imgPath: "/images/project5.png",
+        imgPath: "/images/project5.webp",
         bg: "#ffe7db",
         fit: "contain",
         featured: false,
@@ -288,7 +288,7 @@ const projects = [
     },
     {
         id: "xora",
-        imgPath: "/images/project6.png",
+        imgPath: "/images/project6.webp",
         bg: "#ffe7db",
         fit: "contain",
         featured: false,
@@ -297,7 +297,7 @@ const projects = [
     },
     {
         id: "macbook",
-        imgPath: "/images/project7.png",
+        imgPath: "/images/project7.webp",
         bg: "#ffe7db",
         fit: "contain",
         featured: false,
@@ -306,7 +306,7 @@ const projects = [
     },
     {
         id: "cocktails",
-        imgPath: "/images/project8.png",
+        imgPath: "/images/project8.webp",
         bg: "#ffe7db",
         fit: "contain",
         featured: false,
@@ -315,7 +315,7 @@ const projects = [
     },
     {
         id: "travel",
-        imgPath: "/images/project9.png",
+        imgPath: "/images/project9.webp",
         bg: "#ffe7db",
         fit: "contain",
         featured: false,
@@ -324,7 +324,7 @@ const projects = [
     },
     {
         id: "brainwave",
-        imgPath: "/images/project10.png",
+        imgPath: "/images/project10.webp",
         bg: "#ffe7db",
         fit: "contain",
         featured: false,
@@ -333,7 +333,7 @@ const projects = [
     },
     {
         id: "phone",
-        imgPath: "/images/project11.png",
+        imgPath: "/images/project11.webp",
         bg: "#ffe7db",
         fit: "contain",
         featured: false,
@@ -342,7 +342,7 @@ const projects = [
     },
     {
         id: "omnifood",
-        imgPath: "/images/project12.png",
+        imgPath: "/images/project12.webp",
         bg: "#ffe7db",
         fit: "contain",
         featured: false,
