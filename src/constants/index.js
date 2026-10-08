@@ -382,6 +382,39 @@ const modelCredits = [
         ],
     },
     {
+        author: "xenadus",
+        authorUrl: "https://sketchfab.com/xenadus",
+        works: [
+            {
+                title: "React logo",
+                sourceUrl:
+                    "https://sketchfab.com/3d-models/react-logo-76174ceeba96487f9863f974636f641e",
+            },
+        ],
+    },
+    {
+        author: "Acvantad",
+        authorUrl: "https://sketchfab.com/Acvantad",
+        works: [
+            {
+                title: "Python Programming language",
+                sourceUrl:
+                    "https://sketchfab.com/3d-models/python-programming-language-44d992bf56e244448e9ee5b4da083287",
+            },
+        ],
+    },
+    {
+        author: "Fyrestar",
+        authorUrl: "https://sketchfab.com/mevedia",
+        works: [
+            {
+                title: "Three.js",
+                sourceUrl:
+                    "https://sketchfab.com/3d-models/threejs-60320862bf904b7ab0e032c27daf7c7c",
+            },
+        ],
+    },
+    {
         author: "Alex human",
         authorUrl: "https://sketchfab.com/alex-human",
         works: [
